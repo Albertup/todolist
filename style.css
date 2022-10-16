@@ -1,0 +1,115 @@
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+    height: 100vh;
+    background-color: #03dfff;
+    background: linear-gradient(to right, #485563, #29323c);
+    font-family: 'lato';
+}
+
+.b-container {
+    max-width: 800px;
+    position: relative;
+    padding: 10px;
+    margin: 30px auto;
+    background-color: #fafafa;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    /* top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border: 1px solid white;
+     */
+}
+.b-addTask {
+    width: 100%;
+    display: flex;
+    padding: 10px 0;
+    
+}
+.b-addTask > input[type="text"]{
+    width: 90%;;
+    color: #333;
+    border: none;
+    border-bottom: 2px solid #666;
+    background: none;
+    padding: 10px;
+    font-size: 22px;
+    outline: none;
+}
+.b-addTask button {
+    margin: 0 10px;
+    background: #222;
+    color: #fff;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.b-todo, .b-done {
+    margin:  15px 0;
+    padding: 20px;
+    font-size: 20px;
+    font-weight: 500;
+    color: #fafafa;
+    border-bottom: 2px solid #666;
+    box-shadow: rgba(0, 0, 0, 0.35) 2px 2px 2px;
+}
+h3 {
+    font-size: 28px;
+    text-transform: uppercase;
+    text-align: center;
+    color: #222;
+}
+ol {
+    list-style: none;
+    counter-reset: my-counter;
+}
+ol li {
+    width: 100%;
+    padding: 18px;
+    margin: 5px 0;
+    
+    background: #c42525b6;
+    counter-increment: my-counter;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ol.b-done li {
+    background: #24a054;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+ol li::before {
+    content: counter(my-counter);
+    background: #454350;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    text-align: center;
+    color: #fff;
+    margin-right: 0.5rem;
+
+}
+li button {
+    float: right;
+    padding: 5px;
+    font-size: 28px;
+    line-height: 28px;
+    margin-right: 15px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+
+
+i:hover {
+    color: #454350;
+}
